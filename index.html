@@ -16,22 +16,26 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <div class="item">
-                    <img :src="image" alt="">
+                    <img v-for="item in image" :src="image" alt="">
                     <div class="text">
-                        <h3>
-                            {{title}}
-                        </h3>
-                        <p>
-                            {{text}}
-                        </p>
+                        <ul>
+                            <li>
+                                <h3 v-for="item in title">
+                                    {{title}}
+                                </h3>
+                            </li>
+                            <li v-for="item in text">
+                                {{text}}
+                            </li>
+                        </ul>
                     </div>
-                    <button>
-                        &#9756;
-                    </button>
-                    <button>
-                        &#9758;
-                    </button>
                 </div>
+                <button>
+                    &#9756;
+                </button>
+                <button>
+                    &#9758;
+                </button>
             </div>
         </div>
     </div>
