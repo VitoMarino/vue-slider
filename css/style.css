@@ -31,3 +31,7 @@
     text-align: right;
     color: white;
 }
+
+button {
+    font-size: 2rem;
+}
