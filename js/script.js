@@ -31,9 +31,15 @@ createApp ({
         methods: {
             next: function () {
                 this.activeSlide = this.activeSlide - 1;
+                if (this.activeSlide < 0) {
+                    return this.activeSlide = 4;
+                }
             },
             right: function () {
                 this.activeSlide = this.activeSlide + 1;
+                if (this.activeSlide > 4) {
+                    return this.activeSlide = 0;
+                }
             }
         }
 }).mount('#app');
