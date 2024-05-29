@@ -3,7 +3,7 @@ const { createApp } = Vue
 createApp ({
     data() {
         return {
-            activeSlides: 0,
+            activeSlide: 0,
             slides: 
             [{
                 image: 'img/01.webp',
@@ -30,10 +30,10 @@ createApp ({
     },
         methods: {
             next: function () {
-                
+                this.activeSlide = this.activeSlide - 1;
             },
             right: function () {
-
+                this.activeSlide = this.activeSlide + 1;
             }
         }
 }).mount('#app');
