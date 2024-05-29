@@ -15,34 +15,21 @@
     <div id="app">
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
-
-                <!-- 
-
-                    <div class='item'>
-                        <img :src = slieds[activeSlide].image
-                        <h3> slieds[activeSlide].title </h3>
-                        <div class='title'>
-                            <span> slieds[activeSlide].title </span>
-                        </div>
-                    </div>
-
-                -->
-
-                <div v-for="item in slides" class="item">
-                    <img :src="item.image" alt="Marvel">
+                <div class="item">
+                    <img :src="slides[activeSlide]" alt="Marvel">
                     <div class="text">
                         <h3>
-                        {{item.title}}
+                            slides[activeSlides].title
                         </h3>
                         <p>
-                            {{item.text}}
+                            slides[activeSlides].text
                         </p>
                     </div>
                 </div>
-                <button>
+                <button @click="next" class="next">
                     &#9756;
                 </button>
-                <button>
+                <button @click="right" class="right">
                     &#9758;
                 </button>
             </div>
