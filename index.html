@@ -16,16 +16,23 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
                 <div class="item">
-                    <img v-for="item in image" :src="image" alt="">
+                    
+                    <ul>
+                        <li v-for="item in oggettoArray">
+                            {{item.image}}
+                            <img :src="image" alt="Marvel">
+                        </li>
+                    </ul>
+                    
                     <div class="text">
                         <ul>
                             <li>
-                                <h3 v-for="item in title">
-                                    {{title}}
+                                <h3 v-for="item in oggettoArray">
+                                    {{item.title}}
                                 </h3>
                             </li>
-                            <li v-for="item in text">
-                                {{text}}
+                            <li v-for="item in oggettoArray">
+                                {{item.text}}
                             </li>
                         </ul>
                     </div>
